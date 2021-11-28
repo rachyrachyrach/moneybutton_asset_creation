@@ -1,0 +1,4 @@
+#no virtual environment
+.venv
+*__pycache__*
+db.sqlite3
