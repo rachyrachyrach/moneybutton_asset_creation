@@ -4,19 +4,12 @@ Create tokens using python!
 We are following the [Create Assett doc](https://docs.moneybutton.com/docs/api/v2/api-v2-asset-create.html#example-request) from Moneybutton.<br />
 You will need to set up your Client ID and Client Secret from Moneybutton's app. Screenshot below shows app location in your Moneybutton account. 
 ![browser](docs/images/mb_apps.jpg)
-
-````
-export CLIENT_SECRET="Your_client_secret_number_here"
-export CLIENT_ID="Your_client_ID_number_here"
-````
-<br />
-
 1. createassets.py Is the file with the code. This is missing the client id and secret. Run this command in your terminal. This creates a local hidden file with the password.
-<br />
-```
+
+````
 export CLIENT_SECRET="Your_client_secret_number_here"
 export CLIENT_ID="Your_client_ID_number_here"
-```
+````
 <br />
 1. For lines 6 & 7 I added os.environ
 ```
