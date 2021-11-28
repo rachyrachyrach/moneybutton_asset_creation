@@ -1,6 +1,7 @@
 # moneybutton_asset_creation
 Create tokens using python!
 ---------------------------
+We are following the [Create Assett doc](https://docs.moneybutton.com/docs/api/v2/api-v2-asset-create.html#example-request) from Moneybutton.<br />
 You will need to set up your Client ID and Client Secret from Moneybutton's app. Screenshot below shows app location in your Moneybutton account. 
 ![browser](docs/images/mb_apps.jpg)
 
