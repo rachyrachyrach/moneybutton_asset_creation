@@ -5,6 +5,7 @@ We are following the [Create Assett doc](https://docs.moneybutton.com/docs/api/v
 You will need to set up your Client ID and Client Secret from Moneybutton's app. Screenshot below shows app location in your Moneybutton account. 
 
 ![browser](docs/images/mb_apps.jpg)
+![browser](docs/images/mb_clientsecrets.jpg)
 1. [createassets.py](createassets.py) Is the file with the code. This is missing the client id and secret. This is to keep the secrets safe and not have to worry about removing it later when sharing. Run these 2 commands in your terminal. This creates a local hidden file with the password.
 
 ````
