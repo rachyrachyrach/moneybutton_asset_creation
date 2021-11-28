@@ -1,5 +1,6 @@
 # moneybutton_asset_creation
-<u>Create tokens using python!</u>
+Create tokens using python!
+---------------------------
 You will need to set up your Client ID and Client Secret from Moneybutton's app. Screenshot below shows app location in your Moneybutton account. 
 ![browser](docs/images/mb_apps.jpg)
 
