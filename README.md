@@ -17,7 +17,7 @@ This is missing the client id and secret. I created:
 ```
 2. For lines 6 & 7 I added os.environ
 ```
-client_id = os.environ.get('CLIENT_ID')# insert Moneybutton
-client id by export CLIENT_ID local file
-client_secret = os.environ.get('CLIENT_SECRET')# insert MB client secret by using export CLIENT_SECRET local file
+    client_id = os.environ.get('CLIENT_ID')# insert Moneybutton
+    client id by export CLIENT_ID local file
+    client_secret = os.environ.get('CLIENT_SECRET')# insert MB client secret by using export CLIENT_SECRET local file
 ```
