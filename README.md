@@ -68,3 +68,4 @@ python getasset.py
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYjMyMjQ4M2VmMDczMjVkZjQ2ODY3NDJhNDM2NmIxZSIsImV4cCI6MTY0MjMxMzYxOCwic2NvcGUiOiJhcHBsaWNhdGlvbl9hY2Nlc3M6d3JpdGUifQ.gJAUjlenqEjwx0QO7AJ5PL-MZwopquveZzSxTlf1otg
 {'errors': [{'id': '1116a070-768b-11ec-a6c5-750e05e34470', 'status': 500, 'title': 'Server Error', 'detail': 'An unexpected error has ocurred. Please, try again in a few minutes. Error ID 1116a070-768b-11ec-a6c5-750e05e34470.'}], 'jsonapi': {'version': '1.0'}}
 ```
+8. With the errors received I will have to contact Moneybutton to see what I'm missing. 
