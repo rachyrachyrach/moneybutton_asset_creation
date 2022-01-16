@@ -22,17 +22,11 @@ resp_json = response.json()
 access_token = resp_json["access_token"]
 print(access_token)
 
-#Creating asset
-response = requests.post(
+#Get asset
+response = requests.get(
     'https://www.moneybutton.com/api/v2/me/assets',
     headers={'Authorization': 'Bearer ' + access_token},
-    data={
-        "protocol": "SFP",
-        "name": "Molly Match Token",
-        "initialSupply": 1000000,
-        "description": "This is for the GitHub repository on asset creation using Python.",
-        "avatar": "https://github.com/rachyrachyrach/moneybutton_asset_creation/blob/master/docs/images/mollymatch_paw.png",
-        "url": "https://github.com/rachyrachyrach/moneybutton_asset_creation"})
+)
 
 resp_json = response.json()
 print(resp_json)

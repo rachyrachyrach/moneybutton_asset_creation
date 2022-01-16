@@ -55,3 +55,16 @@ response = requests.post(
         "avatar": "https://mywebsite.com/token-avatar.png",
         "url": "https://mywebsite.com"})
 ```
+6. We run python createasset.py and expect a return. This is what we receive
+```
+python createasset.py
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYjMyMjQ4M2VmMDczMjVkZjQ2ODY3NDJhNDM2NmIxZSIsImV4cCI6MTY0MjMxMzA5MCwic2NvcGUiOiJhcHBsaWNhdGlvbl9hY2Nlc3M6d3JpdGUifQ.h0asLNlpShyQM1wGIKcS2qGfy6X_eHiau-1jVfQfpSA
+{'errors': [{'id': 'd5b63cd0-7689-11ec-a6c5-750e05e34470', 'status': 500, 'title': 'Server Error', 'detail': 'An unexpected error has ocurred. Please, try again in a few minutes. Error ID d5b63cd0-7689-11ec-a6c5-750e05e34470.'}], 'jsonapi': {'version': '1.0'}}
+(.venv) mollymatch@Rachaels-MacBook-Pro moneybutton_assets % 
+```
+7. We created getasset.py to see if we can read the tokens from my wallet. This is the response. 
+```
+python getasset.py 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYjMyMjQ4M2VmMDczMjVkZjQ2ODY3NDJhNDM2NmIxZSIsImV4cCI6MTY0MjMxMzYxOCwic2NvcGUiOiJhcHBsaWNhdGlvbl9hY2Nlc3M6d3JpdGUifQ.gJAUjlenqEjwx0QO7AJ5PL-MZwopquveZzSxTlf1otg
+{'errors': [{'id': '1116a070-768b-11ec-a6c5-750e05e34470', 'status': 500, 'title': 'Server Error', 'detail': 'An unexpected error has ocurred. Please, try again in a few minutes. Error ID 1116a070-768b-11ec-a6c5-750e05e34470.'}], 'jsonapi': {'version': '1.0'}}
+```
