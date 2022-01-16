@@ -12,9 +12,46 @@ You will need to set up your Client ID and Client Secret from Moneybutton's app.
 export CLIENT_SECRET="Your_client_secret_number_here"
 export CLIENT_ID="Your_client_ID_number_here"
 ````
-2. os.environ is added in [createassets.py](createassets.py). This pulls the secrets from your local directory.
+2. os.environ is added in [createassets.py](createassets.py). This pulls the secrets from your local environment.
 ```
 client_id = os.environ.get('CLIENT_ID')# insert Moneybutton
 client id by export CLIENT_ID local file
 client_secret = os.environ.get('CLIENT_SECRET')# insert MB client secret by using export CLIENT_SECRET local file
+```
+3. Create token to talk to server. The token is time sensitive and you may need to get a new one. 
+```
+python createasset.py 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYjMyMjQ4M2VmMDczMjVkZjQ2ODY3NDJhNDM2NmIxZSIsImV4cCI6MTY0MjMxMDQzNiwic2NvcGUiOiJhcHBsaWNhdGlvbl9hY2Nlc3M6d3JpdGUifQ.RJ_v6csjT3tk_TJC6CmlOiXrtCzkTVmQ2_8FpfZIk7U
+```
+4. Now we use the "Bearer" to show who is holding the access token that we generated from step 3. This comes from ["api oauth overview"](https://docs.moneybutton.com/docs/api/auth/api-auth-overview.html) section of the Moneybutton docs. 
+```
+curl --request GET \
+  --url 'https://www.moneybutton.com/api/v1/auth/user_identity' \
+  --header 'authorization: Bearer <YOUR_ACCESS_TOKEN>'
+```
+5. We now add data into the python file similar to the Example Request. I also add the url to the image.
+![browser](docs/images/mollymatch_paw.png)
+```
+{
+  "protocol": "SFP",
+  "name": "My First Token",
+  "initialSupply": 1000000,
+  "description": "My first token description",
+  "avatar": "https://mywebsite.com/token-avatar.png",
+  "url": "https://mywebsite.com"
+}
+```
+Here is our code inside the createasset.py file. 
+```
+#Creating asset
+response = requests.post(
+    'https://www.moneybutton.com/api/v2/me/assets',
+    headers={'Authorization': b'Bearer ' + access_token},
+    data={
+        "protocol": "SFP",
+        "name": "My First Token",
+        "initialSupply": 1000000,
+        "description": "My first token description",
+        "avatar": "https://mywebsite.com/token-avatar.png",
+        "url": "https://mywebsite.com"})
 ```
