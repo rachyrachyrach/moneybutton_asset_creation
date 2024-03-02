@@ -12,7 +12,7 @@ You will need to set up your Client ID and Client Secret from Moneybutton's app.
 export CLIENT_SECRET="Your_client_secret_number_here"
 export CLIENT_ID="Your_client_ID_number_here"
 ````
-2. os.environ is added in [createassets.py](createassets.py). This pulls the secrets from your local environment.
+2. os.environ is added in [createasset.py](createasset.py). This pulls the secrets from your local environment.
 ```
 client_id = os.environ.get('CLIENT_ID')# insert Moneybutton
 client id by export CLIENT_ID local file
